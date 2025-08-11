@@ -61,3 +61,55 @@ document.getElementById("quizForm").addEventListener("submit", function(event) {
         betterLuck.style.display = "block";
     }
 });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+createChat({
+	webhookUrl: 'https://himanth3.app.n8n.cloud/webhook/1dcd4e34-f3e7-491d-8325-63a0a4c488ef/chat',
+	webhookConfig: {
+		method: 'POST',
+		headers: {
+			'Content-Type': 'application/json'
+		}
+	},
+	target: '#n8n-chat',
+	mode: 'window',
+	chatInputKey: 'chatInput',
+	chatSessionKey: 'sessionId',
+	loadPreviousSession: true,
+	metadata: {},
+	showWelcomeScreen: false,
+	defaultLanguage: 'en',
+	initialMessages: [
+		'Hi! I’m PyCoder, your learning buddy.',
+		'Need help with a Python topic, finding a course, or working on a project? Just type your question!'
+	],
+	i18n: {
+		en: {
+			title: 'PyCoder Assistant',
+			subtitle: 'Learn Python faster with guided help.',
+			footer: '',
+			getStarted: 'Start Learning',
+			inputPlaceholder: 'Type your Python question..',
+		},
+	},
+	enableStreaming: false,
+});
